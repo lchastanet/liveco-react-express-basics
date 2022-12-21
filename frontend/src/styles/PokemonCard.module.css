@@ -1,0 +1,98 @@
+.card {
+  border: solid lightgray 1px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0.5rem;
+  margin: auto 0;
+}
+
+.name {
+  margin: 0.5em auto;
+}
+
+.type-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  margin: 1em auto;
+}
+
+.type-list-item {
+  border: solid lightgrey 1px;
+  padding: 0.2rem 0.7rem;
+  margin-right: 0.8rem;
+  border-radius: 15px;
+  font-size: small;
+  color: #fff;
+}
+
+.poison {
+  background-color: #92d812;
+}
+
+.water {
+  background-color: #4567f0;
+}
+
+.grass {
+  background-color: #4aa025;
+}
+
+.bug {
+  background-color: #61b16d;
+}
+
+.fire {
+  background-color: #f0903b;
+}
+
+.electric {
+  background-color: #eaca0f;
+}
+
+.normal {
+  background-color: #989b9f;
+}
+
+.flying {
+  background-color: #c3bf9a;
+}
+
+.ground {
+  background-color: #4a362b;
+}
+
+.fighting {
+  background-color: #7b4209;
+}
+
+.psychic {
+  background-color: #2f1352;
+}
+
+.fairy {
+  background-color: #e264a2;
+}
+
+.ghost {
+  background-color: #d8c3f2;
+}
+
+.rock {
+  background-color: #3f4349;
+}
+
+.steel {
+  background-color: #9b95a3;
+}
+
+.ice {
+  background-color: #6898be;
+}
+
+.dragon {
+  background-color: #841c12;
+}

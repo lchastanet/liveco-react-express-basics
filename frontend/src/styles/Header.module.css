@@ -1,0 +1,43 @@
+.header {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #b55348;
+}
+
+.header::before {
+  content: "";
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  left: 1rem;
+  top: 1px;
+  border-radius: 50%;
+  background: rgb(187, 195, 232);
+  background: radial-gradient(
+    circle at 40% 40%,
+    rgba(187, 195, 232, 1) 0%,
+    rgba(71, 90, 166, 1) 27%,
+    rgba(46, 57, 147, 1) 100%
+  );
+  border: solid lightgrey 0.1rem;
+}
+
+.header .select {
+  font-size: large;
+  user-select: none;
+  height: 2rem;
+  width: 5rem;
+  background-color: #b55348;
+  color: #fff;
+  text-align: center;
+  border-color: transparent;
+}
+
+.header .select:focus {
+  border: none;
+  box-shadow: none;
+  outline: 0;
+}

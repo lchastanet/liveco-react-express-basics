@@ -1,0 +1,11 @@
+.title {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: oblique;
+}
+
+.title .amount {
+  font-style: normal;
+  color: grey;
+}
