@@ -23,7 +23,7 @@ then launch the dev server :
 npm run dev
 ```
 
-In a second terminal prompt go to backend directory.
+In a second terminal prompt go to frontend directory.
 
 then install depencies :
 
