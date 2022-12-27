@@ -16,7 +16,9 @@ function Header({ type, setType, uniqueTypes }) {
       >
         <option value="All">All</option>
         {uniqueTypes.map((uniqueType) => (
-          <option value={uniqueType}>{uniqueType}</option>
+          <option key={uniqueType} value={uniqueType}>
+            {uniqueType}
+          </option>
         ))}
       </select>
     </header>

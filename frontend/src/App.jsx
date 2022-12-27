@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
 import Footer from "./components/Footer";
@@ -10,17 +10,22 @@ function App() {
   const [pokemons, setPokemons] = useState([]);
   const [type, setType] = useState("All");
 
-  const uniqueTypes = useRef([
-    ...new Set(pokemons.map((pokemon) => pokemon.types).flat()),
-  ]);
+  const uniqueTypes = useRef([]);
 
-  axios
-    .get(`http://localhost:8000/pokemon?type=${type}`)
-    .then((res) => setPokemons(res.data));
+  useEffect(() => {
+    axios.get(`http://localhost:8000/pokemon?type=${type}`).then((res) => {
+      if (pokemons.length === 0) {
+        uniqueTypes.current = [
+          ...new Set(res.data.map((pokemon) => pokemon.types).flat()),
+        ];
+      }
+      setPokemons(res.data);
+    });
+  }, [type]);
 
   return (
     <>
-      <Header type={type} setType={setType} uniqueTypes={uniqueTypes} />
+      <Header type={type} setType={setType} uniqueTypes={uniqueTypes.current} />
       <main>
         <PokemonListTitle amoutOfPokemons={pokemons.length} />
         <PokemonList pokemons={pokemons} />
